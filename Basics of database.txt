@@ -1,0 +1,116 @@
+Q1. What do you understand By Database?
+
+=>A database is an electronically stored, systematic collection of data.
+=>It can contain any type of data, including words, numbers, images, videos, and files.
+=>You can use software called a database management system (DBMS) to store, retrieve, and edit data.
+
+Q2. What is Normalization?
+
+=>normalization is a process used in database design to create well-structured
+  tables that minimize data redundancy and dependency.
+
+Q3. What is Difference between DBMS and RDBMS?
+=>Storage Format:
+DBMS: Stores data as files.
+RDBMS: Stores data in tabular form (tables).
+
+Data Access:
+DBMS: Requires accessing data elements individually.
+RDBMS: Allows multiple data elements to be accessed simultaneously.
+
+Data Relationships:
+DBMS: No inherent relationship between data.
+RDBMS: Data is stored in related tables.
+
+Normalization:
+DBMS: Does not support normalization.
+RDBMS: Supports normalization to reduce redundancy and maintain integrity.
+
+Distributed Database:
+DBMS: Does not support distributed databases.
+RDBMS: Supports distributed databases.
+
+Data Structure:
+DBMS: Uses navigational or hierarchical structures.
+RDBMS: Utilizes tabular structures with columns and rows.
+
+Data Volume:
+DBMS: Deals with small quantities of data.
+RDBMS: Handles large amounts of data.
+
+Data Redundancy:
+DBMS: Common in this model.
+RDBMS: Keys and indexes prevent data redundancy.
+
+
+Q4. What is MF Cod Rule of RDBMS Systems?
+
+=>Information is represented logically in tables.
+=>Data must be logically accessible by table, primary key, and column. 
+=>Null values must be uniformly treated as “missing information,” not as empty strings, blanks, or zeros.
+
+Q5. What do you understand By Data Redundancy?
+
+=>Data redundancy occurs when the same piece of data exists in multiple places, whereas data inconsistency
+  is when the same data exists in different formats in multiple tables.
+
+Q6. What is DDL Interpreter?
+
+=> It interprets the DDL (Data Definition Language) Instructions and stores the record in a data dictionary
+   Query Optimizer: It executes the DML Instructions and picks the lowest cost evaluation plan out of all the alternatives present.
+
+Q7. What is DML Compiler in SQL?
+
+=>DML (Data Manipulation Language) is a type of SQL command used to manipulate data in a database.
+=>It inserts, updates, and deletes data from a database table.
+=>Examples of DML statements include INSERT, UPDATE, and DELETE.
+
+Q8. What is SQL Key Constraints writing an Example of SQL Key Constraints?
+
+=>SQL key constraints are used to ensure data integrity and accuracy within a database.
+
+=>Different types of key constraints include:
+
+Primary Key:
+Uniquely identifies each record in a table, and cannot contain null values.
+A table can only have one primary key, which can be made up of one or more columns.
+
+Foreign Key:
+Establishes a relationship between two tables by linking a column in one table to the primary key in another.
+This ensures data consistency across both tables.
+
+Unique:
+Ensures that all values in a column are different.
+Any attempt to add a duplicate value will result in an error.
+
+Not Null:
+Prevents a column from having any null values.
+This forces a field to always have a value.
+
+Check:
+Allows users to specify a condition that needs to be met for successful data insertion into a table.
+For example, a voting list table might require voters to be above 18 years old.
+
+Default:
+Automatically inserts a specified default value into a column when no other value is provided. 
+
+
+Q9. What is save Point? How to create a save Point write a Query?
+
+=>A SAVEPOINT is a point in a transaction in which you can roll the transaction back to a certain
+  point without rolling back the entire transaction.
+=>Syntax for Savepoint command: SAVEPOINT SAVEPOINT_NAME;
+  This command is used only in the creation of SAVEPOINT among all the transactions.
+
+
+Q10. What is trigger and how to create a Trigger in SQL?
+
+=>A trigger is a stored procedure in a database that automatically invokes whenever a special event in the database occurs.  
+
+CREATE TRIGGER trigger_name
+{BEFORE | AFTER} {INSERT | UPDATE | DELETE}
+ON table_name
+FOR EACH ROW
+BEGIN
+    -- Trigger body (SQL statements)
+END;
